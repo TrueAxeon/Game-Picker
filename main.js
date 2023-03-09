@@ -8,11 +8,16 @@ const gameObj = (genre, title) => {
     }
 };
 
-// Main genres to pick from
-const genres = ["Action", "JRPG", "Open-World", "Platformer", "RPG", "VR"];
-
 // Main array containing game objects
 const games = [];
+
+// Main genres to pick from
+const genres = [];
+for (let item of games) {
+    if (!genres.some(item.genre)) {
+        genres.push(item.genre);
+    }
+}
 
 // Selecting a genre and a game within it
 let genre = genres[Math.floor(Math.random() * genres.length)];
