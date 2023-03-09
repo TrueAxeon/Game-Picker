@@ -33,16 +33,28 @@ function generateIntro() {
 }
 
 function generateGenreMessage(str) {
-    let options = [];
+    let options = [`How about the ${str} genre?`,
+                `I hope you like ${str} games!`,
+                `Let's try something in the ${str} genre.`,
+                `Oh, I know! Let's pick a game in the ${str} genre for you.`,
+                `${str} genre should do nicely.`];
     return options[Math.floor(Math.random() * options.length)];
 }
 
 function generateGameMessage(obj) {
-    let options = [];
+    let options = [`"${obj.title}" should be a good option.`,
+                `Do you want to try "${obj.title}"? I heard it's great!`,
+                `"${obj.title}" is an amazing option.`,
+                `Can't go wrong with "${obj.title}"!`,
+                `You might like "${obj.title}"!`];
     return options[Math.floor(Math.random() * options.length)];
 }
 
 function generatePlayTime() {
-    let options = [];
+    let options = ["Take it easy and play for an hour.",
+                "Two hours should be enough time for you, right?",
+                "Go ahead and game for three hours! Not like you have anything better to do.",
+                "You've got four hours, so go ham!",
+                "The next five hours are yours. Hope you don't have any other plans!"];
     return options[Math.floor(Math.random() * options.length)];
 }
