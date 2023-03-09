@@ -2,19 +2,19 @@
 
 // Factory function to make populating games array easier
 const gameObj = (genre, title) => {
-    {
+    return {
         genre,
         title
     }
 };
 
 // Main array containing game objects
-const games = [];
+const games = [gameObj("VR", "Aperture Hand Lab")];
 
 // Main genres to pick from
 const genres = [];
 for (let item of games) {
-    if (!genres.some(item.genre)) {
+    if (!genres.includes(item.genre)) {
         genres.push(item.genre);
     }
 }
